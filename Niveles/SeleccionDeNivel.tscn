@@ -1,0 +1,194 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://SPRITES/Imagenes de fondo/5cba1e4f70c40_thumb900.jpg" type="Texture" id=1]
+[ext_resource path="res://SPRITES/font_Autumn.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://SPRITES/Imagenes de fondo/54379.svg" type="Texture" id=3]
+[ext_resource path="res://Niveles/SeleccionDeNivel.gd" type="Script" id=4]
+[ext_resource path="res://SPRITES/Orange Juice.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://SPRITES/Imagenes de fondo/CapturaNivel2.JPG" type="Texture" id=6]
+[ext_resource path="res://SPRITES/Imagenes de fondo/CapturaNivel1.JPG" type="Texture" id=7]
+[ext_resource path="res://SPRITES/Imagenes de fondo/CapturaNivel3.JPG" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+outline_color = Color( 0.811765, 0.0352941, 0.0352941, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Mensaje"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 45, 46, 47, 48, 49, 50, 49, 48, 47, 46, 45 ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 2 )
+
+[node name="SeleccionDeNivel" type="Node"]
+pause_mode = 2
+script = ExtResource( 4 )
+
+[node name="Fondo" type="TextureRect" parent="."]
+margin_right = 704.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5cba1e4f70c40_thumb900" type="Sprite" parent="Fondo"]
+position = Vector2( 448, 128 )
+scale = Vector2( 0.996667, 1.03222 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Control" type="Control" parent="."]
+light_mask = 16
+margin_top = 128.0
+margin_right = 704.0
+margin_bottom = 352.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Der" type="Button" parent="Control"]
+margin_left = 640.0
+margin_top = 64.0
+margin_right = 704.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImagenDer" type="TextureButton" parent="Control/Der"]
+margin_left = 64.0
+margin_top = 96.0
+margin_right = 121.0
+margin_bottom = 186.0
+rect_rotation = 180.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Izq" type="Button" parent="Control"]
+margin_top = 64.0
+margin_right = 64.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImageIzq" type="TextureButton" parent="Control/Izq"]
+margin_left = -1.7818
+margin_top = -1.1272
+margin_right = 57.2182
+margin_bottom = 88.8728
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mensaje" type="Label" parent="."]
+margin_left = 64.0
+margin_right = 640.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.882353, 0.101961, 0.101961, 1 )
+custom_colors/font_outline_modulate = Color( 0.933333, 0.898039, 0.898039, 1 )
+custom_colors/font_color_shadow = Color( 0.94902, 0.941176, 0.941176, 1 )
+text = "SELECCIONA EL NIVEL!!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Mensaje"]
+autoplay = "Mensaje"
+anims/Mensaje = SubResource( 3 )
+
+[node name="NivelBoton" type="Control" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 640.0
+margin_bottom = 416.0
+
+[node name="Nivel1" type="TextureButton" parent="NivelBoton"]
+margin_right = 576.0
+margin_bottom = 352.0
+texture_normal = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nivel2" type="TextureButton" parent="NivelBoton"]
+margin_left = 704.0
+margin_right = 1280.0
+margin_bottom = 352.0
+disabled = true
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prox" type="Label" parent="NivelBoton/Nivel2"]
+margin_left = 96.0
+margin_top = 128.0
+margin_right = 512.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.054902, 0.0509804, 0.0509804, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "proximamente!!"
+align = 1
+valign = 1
+
+[node name="Nivel3" type="TextureButton" parent="NivelBoton"]
+margin_left = 1408.0
+margin_right = 1984.0
+margin_bottom = 352.0
+disabled = true
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Prox" type="Label" parent="NivelBoton/Nivel3"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 544.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 5 )
+text = "proximamente!!!"
+align = 1
+valign = 1
+[connection signal="mouse_entered" from="Control/Der/ImagenDer" to="." method="_on_ImagenDer_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Der/ImagenDer" to="." method="_on_ImagenDer_mouse_exited"]
+[connection signal="pressed" from="Control/Der/ImagenDer" to="." method="_on_ImagenDer_pressed"]
+[connection signal="mouse_entered" from="Control/Izq/ImageIzq" to="." method="_on_ImageIzq_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Izq/ImageIzq" to="." method="_on_ImageIzq_mouse_exited"]
+[connection signal="pressed" from="Control/Izq/ImageIzq" to="." method="_on_ImageIzq_pressed"]
+[connection signal="pressed" from="NivelBoton/Nivel1" to="." method="_on_Nivel1_pressed"]
+[connection signal="pressed" from="NivelBoton/Nivel2" to="." method="_on_Nivel2_pressed"]
+[connection signal="pressed" from="NivelBoton/Nivel3" to="." method="_on_Nivel3_pressed"]

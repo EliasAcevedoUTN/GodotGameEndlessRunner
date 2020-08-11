@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Game1.gd" type="Script" id=1]
+[ext_resource path="res://SPRITES/Imagenes de fondo/54379.svg" type="Texture" id=2]
+[ext_resource path="res://SPRITES/STJEDISE.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://SPRITES/Imagenes de fondo/Background.png" type="Texture" id=4]
+[ext_resource path="res://Puntaje.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Mensaje"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 31, 32, 33, 34, 35, 34, 33, 32, 31, 30 ]
+}
+
+[node name="Game1" type="Node"]
+pause_mode = 1
+script = ExtResource( 1 )
+
+[node name="Fondo" type="TextureRect" parent="."]
+margin_right = 704.0
+margin_bottom = 480.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Obstaculos" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="Puntaje" type="Timer" parent="."]
+
+[node name="Comenzar" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="si" type="Button" parent="Control"]
+margin_left = 224.0
+margin_top = 224.0
+margin_right = 320.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "si"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="Button" parent="Control"]
+margin_left = 384.0
+margin_top = 224.0
+margin_right = 480.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "no"
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 224.0
+margin_top = 128.0
+margin_right = 480.0
+margin_bottom = 192.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.321569, 0.933333, 0.0784314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 25
+text = "continuar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animacion" type="AnimationPlayer" parent="Control"]
+autoplay = "Mensaje"
+anims/Mensaje = SubResource( 4 )
+
+[node name="Pausa" type="TextureButton" parent="."]
+pause_mode = 2
+margin_right = 32.0
+margin_bottom = 32.0
+disabled = true
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puntaje2" parent="." instance=ExtResource( 5 )]
+[connection signal="timeout" from="Obstaculos" to="." method="_on_Obstaculos_timeout"]
+[connection signal="timeout" from="Puntaje" to="." method="_on_Puntaje_timeout"]
+[connection signal="pressed" from="Control/si" to="." method="_on_si_pressed"]
+[connection signal="pressed" from="Control/no" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="Pausa" to="." method="_on_Pausa_pressed"]

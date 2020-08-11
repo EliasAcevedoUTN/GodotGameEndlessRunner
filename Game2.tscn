@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game2.gd" type="Script" id=1]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Fondo" type="TextureRect" parent="."]
+margin_right = 704.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Obstaculos" type="Timer" parent="."]
+
+[node name="Puntaje" type="Timer" parent="."]
+
+[node name="Comenzar" type="Timer" parent="."]
+
+[node name="Pausa" type="TextureButton" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 704.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="si" type="Button" parent="Control"]
+margin_left = 256.0
+margin_top = 224.0
+margin_right = 352.0
+margin_bottom = 288.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="Button" parent="Control"]
+margin_left = 416.0
+margin_top = 224.0
+margin_right = 512.0
+margin_bottom = 288.0
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 512.0
+margin_bottom = 192.0
+[connection signal="timeout" from="Obstaculos" to="." method="_on_Obstaculos_timeout"]
+[connection signal="pressed" from="Pausa" to="." method="_on_Pausa_pressed"]
+[connection signal="pressed" from="Control/si" to="." method="_on_si_pressed"]
+[connection signal="pressed" from="Control/no" to="." method="_on_no_pressed"]

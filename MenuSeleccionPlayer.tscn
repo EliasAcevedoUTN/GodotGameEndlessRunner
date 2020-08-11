@@ -1,0 +1,343 @@
+[gd_scene load_steps=92 format=2]
+
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (4).png" type="Texture" id=1]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__006.png" type="Texture" id=2]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (3).png" type="Texture" id=3]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (5).png" type="Texture" id=4]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (5).png" type="Texture" id=5]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (10).png" type="Texture" id=6]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (10).png" type="Texture" id=7]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (7).png" type="Texture" id=8]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (8).png" type="Texture" id=9]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (2).png" type="Texture" id=10]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (7).png" type="Texture" id=11]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (1).png" type="Texture" id=12]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (3).png" type="Texture" id=13]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__001.png" type="Texture" id=14]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (2).png" type="Texture" id=15]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__002.png" type="Texture" id=16]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (1).png" type="Texture" id=17]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (6).png" type="Texture" id=18]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (2).png" type="Texture" id=19]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__008.png" type="Texture" id=20]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (6).png" type="Texture" id=21]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__007.png" type="Texture" id=22]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (3).png" type="Texture" id=23]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (10).png" type="Texture" id=24]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (8).png" type="Texture" id=25]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (9).png" type="Texture" id=26]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (4).png" type="Texture" id=27]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (7).png" type="Texture" id=28]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (1).png" type="Texture" id=29]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (9).png" type="Texture" id=30]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (8).png" type="Texture" id=31]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Idle (6).png" type="Texture" id=32]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__005.png" type="Texture" id=33]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__009.png" type="Texture" id=34]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (9).png" type="Texture" id=35]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Idle (5).png" type="Texture" id=36]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Idle (4).png" type="Texture" id=37]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__003.png" type="Texture" id=38]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Idle__004.png" type="Texture" id=39]
+[ext_resource path="res://MenuSeleccionPlayer.gd" type="Script" id=40]
+[ext_resource path="res://SPRITES/Orange Juice.ttf" type="DynamicFontData" id=41]
+[ext_resource path="res://SPRITES/Transformers Movie.ttf" type="DynamicFontData" id=42]
+[ext_resource path="res://SPRITES/Imagenes de fondo/5cba1e4f70c40_thumb900.jpg" type="Texture" id=43]
+[ext_resource path="res://SPRITES/Imagenes de fondo/54379.svg" type="Texture" id=44]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__003.png" type="Texture" id=45]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__009.png" type="Texture" id=46]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__006.png" type="Texture" id=47]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__004.png" type="Texture" id=48]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__007.png" type="Texture" id=49]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__000.png" type="Texture" id=50]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__005.png" type="Texture" id=51]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__002.png" type="Texture" id=52]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__008.png" type="Texture" id=53]
+[ext_resource path="res://SPRITES/PLAYERS/ninjaadventurenew/png/Attack__001.png" type="Texture" id=54]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (10).png" type="Texture" id=55]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (4).png" type="Texture" id=56]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (2).png" type="Texture" id=57]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (3).png" type="Texture" id=58]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (6).png" type="Texture" id=59]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (8).png" type="Texture" id=60]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (5).png" type="Texture" id=61]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (7).png" type="Texture" id=62]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (9).png" type="Texture" id=63]
+[ext_resource path="res://SPRITES/PLAYERS/freeknight/png/Attack (1).png" type="Texture" id=64]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (3).png" type="Texture" id=65]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (6).png" type="Texture" id=66]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (8).png" type="Texture" id=67]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (7).png" type="Texture" id=68]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (2).png" type="Texture" id=69]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (4).png" type="Texture" id=70]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (9).png" type="Texture" id=71]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (2).png" type="Texture" id=72]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (1).png" type="Texture" id=73]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (6).png" type="Texture" id=74]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (4).png" type="Texture" id=75]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (1).png" type="Texture" id=76]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (10).png" type="Texture" id=77]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (8).png" type="Texture" id=78]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (7).png" type="Texture" id=79]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (3).png" type="Texture" id=80]
+[ext_resource path="res://SPRITES/PLAYERS/robotfree/png/Melee (5).png" type="Texture" id=81]
+[ext_resource path="res://SPRITES/PLAYERS/jackfree/png/Walk (5).png" type="Texture" id=82]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 50 ), ExtResource( 54 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 53 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "demo",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 16 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 2 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "presentacion",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 64 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 56 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 62 ), ExtResource( 60 ), ExtResource( 63 ), ExtResource( 55 ) ],
+"loop": false,
+"name": "demo",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 32 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "presentacion",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 76 ), ExtResource( 69 ), ExtResource( 65 ), ExtResource( 70 ), ExtResource( 81 ), ExtResource( 66 ), ExtResource( 79 ), ExtResource( 78 ) ],
+"loop": false,
+"name": "demo",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 37 ), ExtResource( 5 ), ExtResource( 21 ), ExtResource( 8 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "presentacion",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 73 ), ExtResource( 72 ), ExtResource( 80 ), ExtResource( 75 ), ExtResource( 82 ), ExtResource( 74 ), ExtResource( 68 ), ExtResource( 67 ), ExtResource( 71 ), ExtResource( 77 ) ],
+"loop": false,
+"name": "demo",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 27 ), ExtResource( 36 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 35 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "presentacion",
+"speed": 15.0
+} ]
+
+[sub_resource type="DynamicFont" id=5]
+size = 45
+outline_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+font_data = ExtResource( 42 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Mensaje"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 45, 46, 47, 48, 49, 50, 49, 48, 47, 46, 45 ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 46
+outline_color = Color( 0.427451, 0.588235, 0.415686, 1 )
+font_data = ExtResource( 41 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "Elegir"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 45, 46, 47, 48, 49, 50, 49, 48, 47, 46, 45 ]
+}
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 41 )
+
+[node name="MenuSeleccionPlayer" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -192.0
+margin_top = -192.0
+margin_right = 708.0
+margin_bottom = 483.0
+texture = ExtResource( 43 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ninja" type="TextureButton" parent="."]
+anchor_left = 0.091
+anchor_top = 0.333
+anchor_right = 0.182
+anchor_bottom = 0.6
+margin_left = -0.064003
+margin_top = 0.160004
+margin_right = -0.128006
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen_sel" type="AnimatedSprite" parent="Ninja"]
+position = Vector2( 32, 64 )
+scale = Vector2( 0.456897, 0.359339 )
+frames = SubResource( 1 )
+animation = "presentacion"
+
+[node name="Caballero" type="TextureButton" parent="."]
+anchor_left = 0.318
+anchor_top = 0.6
+anchor_right = 0.409
+anchor_bottom = 0.867
+margin_left = 0.127991
+margin_right = 0.0639954
+margin_bottom = -0.160034
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen_sel" type="AnimatedSprite" parent="Caballero"]
+position = Vector2( 32, 63.9999 )
+scale = Vector2( 0.277257, 0.295262 )
+frames = SubResource( 2 )
+animation = "presentacion"
+
+[node name="Robot" type="TextureButton" parent="."]
+anchor_left = 0.545
+anchor_top = 0.667
+anchor_right = 0.636
+anchor_bottom = 0.867
+margin_left = 0.319977
+margin_top = -0.160034
+margin_right = 0.255981
+margin_bottom = -0.160034
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen_sel" type="AnimatedSprite" parent="Robot"]
+position = Vector2( 32, 32 )
+scale = Vector2( 0.334656, 0.365108 )
+frames = SubResource( 3 )
+animation = "presentacion"
+
+[node name="Calabaza" type="TextureButton" parent="."]
+anchor_left = 0.773
+anchor_top = 0.333
+anchor_right = 0.909
+anchor_bottom = 0.6
+margin_left = -0.192017
+margin_top = 0.160004
+margin_right = 0.0639648
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen_sel" type="AnimatedSprite" parent="Calabaza"]
+position = Vector2( 64, 64 )
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 4 )
+animation = "presentacion"
+
+[node name="Mensaje" type="Label" parent="."]
+margin_left = 128.0
+margin_top = 32.0
+margin_right = 616.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.145098, 0.0941176, 0.6, 1 )
+text = "ELIGE TU PERSONAJE!!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animacion" type="AnimationPlayer" parent="Mensaje"]
+autoplay = "Mensaje"
+anims/Mensaje = SubResource( 6 )
+
+[node name="Elegir" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 160.0
+margin_right = 512.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.0509804, 0.901961, 0.203922, 1 )
+text = "Player 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animacion" type="AnimationPlayer" parent="Elegir"]
+autoplay = "Elegir"
+anims/Elegir = SubResource( 9 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 17.0
+margin_right = 76.0
+margin_bottom = 66.0
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+margin_right = 57.0
+margin_bottom = 49.0
+texture = ExtResource( 44 )
+expand = true
+stretch_mode = 1
+[connection signal="mouse_entered" from="Ninja" to="." method="_on_Ninja_mouse_entered"]
+[connection signal="mouse_exited" from="Ninja" to="." method="_on_Ninja_mouse_exited"]
+[connection signal="pressed" from="Ninja" to="." method="_on_Ninja_pressed"]
+[connection signal="mouse_entered" from="Caballero" to="." method="_on_Caballero_mouse_entered"]
+[connection signal="mouse_exited" from="Caballero" to="." method="_on_Caballero_mouse_exited"]
+[connection signal="pressed" from="Caballero" to="." method="_on_Caballero_pressed"]
+[connection signal="mouse_entered" from="Robot" to="." method="_on_Robot_mouse_entered"]
+[connection signal="mouse_exited" from="Robot" to="." method="_on_Robot_mouse_exited"]
+[connection signal="pressed" from="Robot" to="." method="_on_Robot_pressed"]
+[connection signal="mouse_entered" from="Calabaza" to="." method="_on_Calabaza_mouse_entered"]
+[connection signal="mouse_exited" from="Calabaza" to="." method="_on_Calabaza_mouse_exited"]
+[connection signal="pressed" from="Calabaza" to="." method="_on_Calabaza_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

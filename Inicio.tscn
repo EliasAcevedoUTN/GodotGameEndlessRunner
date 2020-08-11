@@ -1,0 +1,305 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Inicio.gd" type="Script" id=1]
+[ext_resource path="res://SPRITES/Imagenes de fondo/67809981-juego-de-fondo-de-la-selva-adecuado-para-desplazamiento-lateral-acción-y-aventura-.jpg" type="Texture" id=2]
+[ext_resource path="res://SPRITES/Imagenes de fondo/label_HP_bg.png" type="Texture" id=3]
+[ext_resource path="res://SPRITES/STJEDISE.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://SPRITES/lasercorps3d.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://SPRITES/font_Autumn.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "salir?"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Salir/pregunta:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 50, 51, 52, 53, 54, 55, 54, 53, 52, 51, 50 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "titulo"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 63, 64, 65, 64, 63, 62, 61, 60 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "titulo"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 63, 64, 65, 64, 63, 62, 61, 60 ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 50
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 30
+font_data = ExtResource( 5 )
+
+[node name="Inicio" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1.36035
+margin_right = 707.64
+margin_bottom = 482.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 22.0
+margin_right = 679.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.643137, 0.145098, 0.145098, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Endless Runner!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animacion" type="AnimationPlayer" parent="Titulo"]
+autoplay = "salir?"
+anims/salir? = SubResource( 2 )
+anims/titulo = SubResource( 3 )
+
+[node name="animacionTitulo" type="AnimationPlayer" parent="Titulo"]
+autoplay = "titulo"
+anims/titulo = SubResource( 13 )
+
+[node name="info" type="Button" parent="."]
+margin_left = 608.0
+margin_top = 416.0
+margin_right = 672.0
+margin_bottom = 448.0
+text = "INFO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="info"]
+margin_left = -110.0
+margin_top = -114.0
+margin_right = 81.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="TextureRect" parent="info/Control"]
+margin_left = -404.773
+margin_top = -282.249
+margin_right = 108.227
+margin_bottom = -162.249
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="info/Control"]
+margin_left = -286.761
+margin_top = -276.444
+margin_right = -6.76025
+margin_bottom = -171.444
+custom_fonts/font = SubResource( 4 )
+text = "PLAYER 1 SALTA CON TECLA 'W'
+
+PLAYER 2 SALTA CON TECLA 'FLECHA ARRIBA'"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 384.0
+margin_right = 448.0
+margin_bottom = 448.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "salir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="MenuButton" parent="Salir"]
+margin_left = -32.0
+margin_top = -64.0
+margin_right = 258.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="si" type="Button" parent="Salir/MenuButton"]
+anchor_top = -1.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 160.0
+margin_right = -160.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "si"
+
+[node name="no" type="Button" parent="Salir/MenuButton"]
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 224.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "no"
+
+[node name="pregunta" type="Label" parent="Salir"]
+visible = false
+margin_left = -32.0
+margin_top = -160.0
+margin_right = 256.0
+margin_bottom = -96.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.901961, 0.439216, 0.0588235, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "¿¿SEGURO??"
+align = 1
+valign = 1
+
+[node name="jugar" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 160.0
+margin_right = 448.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+action_mode = 0
+text = "jugar"
+
+[node name="MenuButton" type="MenuButton" parent="jugar"]
+margin_left = -64.0
+margin_top = -32.0
+margin_right = 256.0
+margin_bottom = 128.0
+
+[node name="TextureRect" type="TextureRect" parent="jugar/MenuButton"]
+margin_right = 327.0
+margin_bottom = 229.0
+texture = ExtResource( 3 )
+expand = true
+flip_h = true
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="one_player" type="Button" parent="jugar/MenuButton"]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 258.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "un player"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="multi_player" type="Button" parent="jugar/MenuButton"]
+margin_top = 96.0
+margin_right = 320.0
+margin_bottom = 135.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "multi player"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="volver" type="Button" parent="jugar/MenuButton"]
+margin_left = 69.0
+margin_top = 160.0
+margin_right = 272.0
+margin_bottom = 205.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "volver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="Salir/MenuButton/si" to="." method="_on_si_pressed"]
+[connection signal="pressed" from="Salir/MenuButton/no" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="jugar/MenuButton/one_player" to="." method="_on_one_player_pressed"]
+[connection signal="pressed" from="jugar/MenuButton/multi_player" to="." method="_on_multi_player_pressed"]
+[connection signal="pressed" from="jugar/MenuButton/volver" to="." method="_on_volver_pressed"]
